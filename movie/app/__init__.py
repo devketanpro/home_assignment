@@ -7,6 +7,6 @@ from .views import FetchRecord, MovieView
 
 appbuilder = AppBuilder(app, db.session)
 appbuilder.add_view(FetchRecord, "Fetch Movies", category="Movie detail")
-appbuilder.add_view(MovieView, "List Groups", category="Movie detail list", href="/list_groups/movieview/list/")
+appbuilder.add_view(MovieView, "List Groups", category="Movie detail list", href="/movieview/list/")
 
 
