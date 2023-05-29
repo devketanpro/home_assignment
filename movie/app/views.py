@@ -1,6 +1,7 @@
 import requests
 from flask_appbuilder import BaseView, ModelView, expose
 from flask_appbuilder.models.sqla.interface import SQLAInterface
+
 from .models import Movie
 from .utils import create_movie_record
 
@@ -17,7 +18,10 @@ class FetchRecord(BaseView):
 
     @expose("/fetch_record/")
     def fetch_movies(self):
-        response = requests.get("https://query.wikidata.org/sparql", params={"format": "json", "query": self.query})
+        response = requests.get(
+            "https://query.wikidata.org/sparql",
+            params={"format": "json", "query": self.query},
+        )
         if response.status_code == 200:
             movie_data = response.json().get("results").get("bindings")
             if create_movie_record(movie_data):

@@ -39,6 +39,6 @@ You can log in as a admin user. In the header section you can see two drop down.
 
 Command to  run test case
 ```
-- python tests/test_movie.py
+- python -m unittest
 ```
 That's it!!

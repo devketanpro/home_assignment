@@ -1,4 +1,5 @@
 import os
+
 from dotenv import load_dotenv
 from flask_appbuilder.security.manager import AUTH_DB
 
@@ -10,7 +11,9 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # The SQLAlchemy connection string.
-SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(basedir, f"{os.getenv('DBF_NAME')}.db")
+SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(
+    basedir, f"{os.getenv('DBF_NAME')}.db"
+)
 
 # Flask-WTF flag for CSRF
 CSRF_ENABLED = True
