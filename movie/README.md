@@ -31,6 +31,7 @@ You can log in as a admin user. In the header section you can see two drop down.
 - Movie detail
  
     onclick Fetch Movies link appear on click Fetch Movie you can fetch movie date from given url.
+    This may take a little time to fetch large amount of movie data.
   - Movie detail list
 
     onclick Fetch Movies link appear on click List Groups you can see list of movies data stored in database.
