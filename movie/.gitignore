@@ -1,0 +1,10 @@
+*.pyc
+*.db
+./database.db
+./tmp
+./build/*
+.idea
+env
+venv
+*.sublime*
+
